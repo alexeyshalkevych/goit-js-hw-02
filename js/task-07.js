@@ -23,13 +23,13 @@
 
 const logins = ["Mango", "robotGoogles", "Poly", "Aj4x1sBozz", "qwerty123"];
 
-const isLoginValid = function(login) {
+const isLoginValid = login => {
   const loginLength = login.length;
 
   return loginLength >= 4 && loginLength <= 16 ? true : false;
 };
 
-const isLoginUnique = function(allLogins, login) {
+const isLoginUnique = (allLogins, login) => {
   for (const item of allLogins) {
     if (item === login) {
       return false;
@@ -39,10 +39,11 @@ const isLoginUnique = function(allLogins, login) {
   return true;
 };
 
-const addLogin = function(allLogins, login) {
+const addLogin = (allLogins, login) => {
   if (isLoginValid(login)) {
     if (isLoginUnique(allLogins, login)) {
       allLogins.push(login);
+
       return console.log("Логин успешно добавлен!");
     } else {
       return console.log("Такой логин уже используется!");
