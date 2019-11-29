@@ -23,13 +23,14 @@ let total = 0;
 
 while (true) {
   input = prompt("Введите число", 0);
+  const convertToNumber = Number(input);
 
-  if (input === "" || !isFinite(input)) {
+  if (input === "" || !Number.isFinite(convertToNumber)) {
     alert("Было введено не число, попробуйте еще раз");
   } else if (input === null) {
     break;
   } else {
-    numbers.push(+input);
+    numbers.push(convertToNumber);
   }
 }
 
