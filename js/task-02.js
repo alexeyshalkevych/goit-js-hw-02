@@ -8,12 +8,7 @@
 // Вызовы функции для проверки работоспособности твоей реализации.
 
 const calculateEngravingPrice = (message, pricePerWord) => {
-  const arrayWordsInMessage = message.split(" ");
-  const arrayWordsInMessageLength = arrayWordsInMessage.length;
-
-  pricePerWord *= arrayWordsInMessageLength;
-
-  return pricePerWord;
+  return message.split(" ").length * pricePerWord;
 };
 
 console.log(

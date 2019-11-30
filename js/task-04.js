@@ -8,11 +8,8 @@
 // возвращает укороченную версию.
 // Вызовы функции для проверки работоспособности твоей реализации.
 
-const formatString = string => {
-  const strLength = string.length;
-
-  return strLength > 40 ? `${string.slice(0, 40)}...` : string;
-};
+const formatString = string =>
+string.length > 40 ? `${string.slice(0, 40)}...` : string;
 
 console.log(formatString("Curabitur ligula sapien, tincidunt non."));
 // вернется оригинальная строка

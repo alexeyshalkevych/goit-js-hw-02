@@ -45,12 +45,10 @@ const addLogin = (allLogins, login) => {
       allLogins.push(login);
 
       return console.log("Логин успешно добавлен!");
-    } else {
-      return console.log("Такой логин уже используется!");
     }
-  } else {
-    return console.log("Ошибка! Логин должен быть от 4 до 16 символов");
+    return console.log("Такой логин уже используется!");
   }
+  return console.log("Ошибка! Логин должен быть от 4 до 16 символов");
 };
 
 // Вызовы функции для проверки
