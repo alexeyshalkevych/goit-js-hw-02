@@ -20,17 +20,17 @@
 let input;
 const numbers = [];
 
-while ((input = prompt("Введите число"))) {
+do {
+  input = prompt("Введите число");
+
   if (Number.isNaN(+input)) {
     alert("Было введено не число, попробуйте еще раз");
   } else if (input !== null) {
     numbers.push(+input);
   }
-}
+} while (input !== null);
 
-const isEmpty = numbers.length === 0;
-
-if (!isEmpty) {
+if (!(numbers.length === 0)) {
   let total = 0;
 
   for (const item of numbers) {
