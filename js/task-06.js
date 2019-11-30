@@ -19,23 +19,23 @@
 
 let input;
 const numbers = [];
-let total = 0;
 
-while (true) {
-  input = prompt("Введите число", 0);
-  const convertToNumber = Number(input);
-
-  if (input === "" || !Number.isFinite(convertToNumber)) {
+while ((input = prompt("Введите число"))) {
+  if (Number.isNaN(+input)) {
     alert("Было введено не число, попробуйте еще раз");
-  } else if (input === null) {
-    break;
-  } else {
-    numbers.push(convertToNumber);
+  } else if (input !== null) {
+    numbers.push(+input);
   }
 }
 
-for (const item of numbers) {
-  total += item;
-}
+const isEmpty = numbers.length === 0;
 
-console.log(`Общая сумма чисел равна ${total}`);
+if (!isEmpty) {
+  let total = 0;
+
+  for (const item of numbers) {
+    total += item;
+  }
+
+  console.log(`Общая сумма чисел равна ${total}`);
+}
