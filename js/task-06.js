@@ -25,12 +25,14 @@ do {
 
   if (Number.isNaN(+input)) {
     alert("Было введено не число, попробуйте еще раз");
-  } else if (input !== null) {
+    continue;
+  }
+  if (input !== null) {
     numbers.push(+input);
   }
 } while (input !== null);
 
-if (!(numbers.length === 0)) {
+if (numbers.length) {
   let total = 0;
 
   for (const item of numbers) {
