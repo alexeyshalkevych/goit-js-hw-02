@@ -33,11 +33,9 @@ do {
 } while (input !== null);
 
 if (numbers.length) {
-  let total = 0;
-
-  for (const item of numbers) {
-    total += item;
-  }
+  const total = numbers.reduce((total, number) => total + number, 0);
 
   console.log(`Общая сумма чисел равна ${total}`);
 }
+
+console.log(numbers);
